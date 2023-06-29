@@ -15,7 +15,8 @@ public class Class_2
 	private int maths;
 	private int biology;
 	
-	
+	@OneToOne
+	Student student;
 
 	public int getStudentid() {
 		return studentid;
@@ -56,6 +57,21 @@ public class Class_2
 	public void setBiology(int biology) {
 		this.biology = biology;
 	}
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	@Override
+	public String toString() {
+		return "Class_2 [studentid=" + studentid + ", physics=" + physics + ", chemistry=" + chemistry + ", maths="
+				+ maths + ", biology=" + biology + ", student=" + student + "]";
+	}
+	
 
 	
 

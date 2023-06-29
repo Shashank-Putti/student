@@ -1,5 +1,6 @@
 package com.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
@@ -12,10 +13,10 @@ public class Student {
 	    private String fatherName;
 	    private String city;
 	    
-	    @OneToOne
+	    @OneToOne(cascade = CascadeType.ALL)
 	    Class_1 class1;
 	    
-	    @OneToOne
+	    @OneToOne(cascade = CascadeType.ALL)
 	    Class_2 class2;
 	    
 		public int getStudentid() {
@@ -53,6 +54,11 @@ public class Student {
 		}
 		public void setClass2(Class_2 class2) {
 			this.class2 = class2;
+		}
+		@Override
+		public String toString() {
+			return "Student [studentid=" + studentid + ", studentName=" + studentName + ", fatherName=" + fatherName
+					+ ", city=" + city + ", class1=" + class1 + ", class2=" + class2 + "]";
 		}
 	    
 	    

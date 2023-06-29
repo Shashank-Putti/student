@@ -10,6 +10,8 @@
 
 <h2>Class 1 marks</h2>
 <form action="savemarks" method="post">
+
+
          <label for="class1Marks">Enter student id:</label>
         <input type="number" id="class1" name="studentid"><br><br>
         Physics: <input type="number" id="class1PhyMarks" name="physics">

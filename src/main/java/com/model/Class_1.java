@@ -2,6 +2,7 @@ package com.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 @Entity
 public class Class_1 {
 	@Id
@@ -11,7 +12,8 @@ public class Class_1 {
 	private int maths;
 	private int biology;
 	
-	
+	@OneToOne
+	Student student;
 
 	public int getStudentid() {
 		return studentid;
@@ -53,6 +55,19 @@ public class Class_1 {
 		this.biology = biology;
 	}
 
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	@Override
+	public String toString() {
+		return "Class_1 [studentid=" + studentid + ", physics=" + physics + ", chemistry=" + chemistry + ", maths="
+				+ maths + ", biology=" + biology + ", student=" + student + "]";
+	}
 	
 
 }

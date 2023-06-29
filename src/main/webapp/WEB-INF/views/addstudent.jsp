@@ -1,40 +1,63 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+	<%@include file="./base.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Student</title>
+<title>Add Student</title>
 </head>
 <body>
-    <h2>Add Student</h2>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add Student</title>
-</head>
-<body>
-    <h2>Add Student</h2>
-    <form action="add" method="post">
-    
-        <label for="studentId">Student ID:</label>
-        <input type="number" id="studentId" name="studentid"><br><br>
-        
-        <label for="studentName">Student Name:</label>
-        <input type="text" id="studentName" name="studentName"><br><br>
-        
-        <label for="fatherName">Father's Name:</label>
-        <input type="text" id="fatherName" name="fatherName"><br><br>
-        
-        <label for="studentId">Student City:</label>
-        <input type="text" id="studentId" name="city"><br><br>
-        
-        
-        
-        
-        
-       <button type="submit">Save</button>  <a href="${pageContext.request.contextPath}/"
-			class="btn btn-secondary">Cancel</a>
-	
-    </form>
+
+
+	<div class="container mt-4">
+
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+						<h3 class="text-center">Add Student Details</h3>
+
+
+						<form action="add" method="post">
+							<div class="form-group">
+								<label for="aa">Student ID</label> <input type="number"
+									class="form-control" id="aa" name="studentid"
+									placeholder="Enter ID">
+							</div>
+							<div class="form-group">
+								<label for="bb">Student Name</label> <input type="text"
+									class="form-control" id="bb" name="studentName"
+									placeholder="Enter Name">
+							</div>
+
+							<div class="form-group">
+								<label for="cc">Father Name</label> <input type="text"
+									class="form-control" id="cc" name="fatherName"
+									placeholder="Enter Father Name">
+							</div>
+
+							<div class="form-group">
+								<label for="dd">Student City</label> <input type="text"
+									class="form-control" id="dd" name="city"
+									placeholder="Enter City">
+							</div>
+
+
+							<div class="container text-center">
+
+								<button type="submit" class="btn btn-outline-success">Save</button>
+								<a href="${pageContext.request.contextPath}/"
+									class="btn btn-secondary">Cancel</a>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	</form>
 </body>
 </html>

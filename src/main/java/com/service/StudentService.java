@@ -35,6 +35,19 @@ public class StudentService {
 	        hibernateTemplate.save(class2);
 	    }
 	    
+	 
+	    
+	    public List<Class_1> getAllClass1Marks() 
+	    {
+			return this.hibernateTemplate.loadAll(Class_1.class);
+		}
+	    
+	    
+	    public List<Class_2> getAllClass2Marks() 
+	    {
+			return this.hibernateTemplate.loadAll(Class_2.class);
+		}
+	    
 	   
 	    
 
